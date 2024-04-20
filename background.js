@@ -4,5 +4,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             target: { tabId: tabId },
             files: ['inject.js']
         });
+		
+		console.log(`Script injected into :${tab.url}`);
     }
 });
